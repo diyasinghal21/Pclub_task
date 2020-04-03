@@ -31,8 +31,8 @@ for name in res.index:
         print(name)
         res = res.drop(name,axis = 0)
 res = res.reset_index()
-print("------------------------------------")
-print("The matched entries are:",end = "\n\n")
+print("******************************************")
+print("The valid entries are:",end = "\n\n")
 valid_names = []
 i1 = []
 i2 = []
@@ -49,7 +49,7 @@ for name in res['Person Name']:
         index2 = index2 + 1 
     index1 = index1 + 1   
 for i in range(0,len(i1)):
-    print("Person Name :",end = " ")
+    print("Name :",end = " ")
     print(res.loc[i1[i],"Person Name"])
     print("Project :",end = " ")
     print(res.loc[i1[i],"Project"])
@@ -59,4 +59,4 @@ for i in range(0,len(i1)):
     print(res2.loc[i2[i],"d"])
     print("Roll No. :",end = " ")
     print(res2.loc[i2[i],"i"])
-    print('--------')                        
+    print('**************')                        
